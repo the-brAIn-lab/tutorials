@@ -1,2 +1,1 @@
-# csci591_CCN
-# tutorials
+# Tutorials
