@@ -83,21 +83,24 @@ jobs:
         pytest --verbose
 ```
 
-then add, commit, and push the file.
+Then add, commit, and push the file. Now, whenever you push to this repository (on the `main` branch), the unit tests will run on a virtual ubuntu computer set up by GitHub. You can see the result of the tests on the browser by looking at the commit:
 
+![My image](images/test_ran.png)
 
+Click on the green check mark to see details of the run (or red x if your tests failed!).
 
+## Some more optional tasks if you have time
 
-We'll do a few things here. To set up our needed github action, we really just need to add the correct file to our repository in the correct place. But we will practice using git branches along the way.
+### Make a change that breaks at least one unit test.
 
-The "proper" way to contribute to a git repository is through the branch, merge, pull request framework.
+Push and confirm!
 
-So we will create and switch to a branch called add-gha:
-```
-git checkout -b add-gha
-```
+### Change to run on pull request to main, not push.
 
-We will then add the file `.github/workflows/unit-tests.yml` (notice that you may need to make some new directories here) with content (you can copy-paste this by finding this file on the tutorials repo):
+The "proper" way to contribute to a git repository is through the branch, merge, pull request framework, and so you will more commonly see tests running on pull requests into `main` than pushes into `main`.
+
+To make this change, change the "on" parameter in your 
+`unit-tests.yml` to run on `pull-request` instead of `push`. That is, change the file to look like
 
 ```
 name: Python Unit Tests
@@ -127,7 +130,12 @@ jobs:
         pytest --verbose
 ```
 
-then add and commit your files.
+To test this, 
+we will create and switch to a branch called `add-gha`:
+```
+git checkout -b add-gha
+```
+then add and commit your file.
 
 Then push:
 
