@@ -130,18 +130,19 @@ jobs:
         pytest --verbose
 ```
 
-To test this, 
-we will create and switch to a branch called `add-gha`:
+Now,
+create and switch to a branch called `add-gha`:
 ```
 git checkout -b add-gha
 ```
-then add and commit your file.
+then add and commit your file as normal (`git add .github/workflows/unit-test.yml`) 
 
-Then push:
+Then push this branch:
 
 ```
 git push origin add-gha
 ```
 
-Then go to your repo on GitHub and create pull request and merge. Now you should have your github actions file, and the test should run!
+Then go to the repository GitHub via the browser and create pull request and merge. The tests should run!
 
+![My image](images/pull_request.png)
