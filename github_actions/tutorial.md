@@ -1,6 +1,6 @@
 Note: this tutorial is based on the tutorial found [here](https://calmcode.io/course/github-actions/introduction).
 
-On your computer, make a new directory and copy the four files from [todo: correct link] into it. These define a simple web application, some tests for it, and the requirements for the environment in which to run it.
+On your computer, make a new directory and copy the four files from [here](https://github.com/the-brAIn-lab/tutorials/tree/main/github_actions/files) into it. These define a simple web application, some tests for it, and the requirements for the environment in which to run it.
 
  If you want to check that the tests are working locally before we try to use GitHub Actions to run the tests, you should either set up a conda environment or a python `venv` to install the dependencies. so do one of the below, and then proceed to run tests locally:
 
