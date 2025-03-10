@@ -1,4 +1,6 @@
-On your computer, make a new directory and copy the four files from [todo: correct link] into it. These define a simple web application, some tests for it, and the requirements for the environment in which to run it.
+Note: this tutorial is based on the tutorial found [here](https://calmcode.io/course/github-actions/introduction).
+
+On your computer, make a new directory and copy the four files from [here](https://github.com/the-brAIn-lab/tutorials/tree/main/github_actions/files) into it. These define a simple web application, some tests for it, and the requirements for the environment in which to run it.
 
  If you want to check that the tests are working locally before we try to use GitHub Actions to run the tests, you should either set up a conda environment or a python `venv` to install the dependencies. so do one of the below, and then proceed to run tests locally:
 
@@ -130,18 +132,19 @@ jobs:
         pytest --verbose
 ```
 
-To test this, 
-we will create and switch to a branch called `add-gha`:
+Now,
+create and switch to a branch called `add-gha`:
 ```
 git checkout -b add-gha
 ```
-then add and commit your file.
+then add and commit your file as normal (`git add .github/workflows/unit-test.yml`) 
 
-Then push:
+Then push this branch:
 
 ```
 git push origin add-gha
 ```
 
-Then go to your repo on GitHub and create pull request and merge. Now you should have your github actions file, and the test should run!
+Then go to the repository GitHub via the browser and create pull request and merge. The tests should run!
 
+![My image](images/pull_request.png)
